@@ -21,8 +21,8 @@ function createGrid(numGridUnits)
 createGrid(numGridUnits);
 
 
-//add an event listener to all units so that when the mouse goes over them, they are colored
-//a for loop is good for this, as using querySelectorAll will yield a node list holding each div unit
+/*add an event listener to all units so that when the mouse goes over them, they are colored
+a for loop is good for this, as using querySelectorAll will yield a node list holding each div unit*/
 let allUnits = document.querySelectorAll(".unit");
 
 function attatchDrawFeatureToGridUnits(allUnits)
