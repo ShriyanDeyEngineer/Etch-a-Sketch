@@ -19,7 +19,7 @@ function createGrid(numRows, numColumns)
         {
             const gridUnit = document.createElement("div"); //create a div unit to store in a row div
             gridUnit.classList.add("unit");
-            gridUnit.textContent = "X";
+            //gridUnit.textContent = "X";
 
             gridRow.appendChild(gridUnit); //add the grid unit div to a row div
             

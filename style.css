@@ -10,22 +10,24 @@ body
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 100px;
+
+    width: 500px;
+    height: 500px;
 }
 
 .row
 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 .unit
 {
     padding: 10px;
+    border: 1px solid gray;
+    margin: 0;
 }
 
 button
