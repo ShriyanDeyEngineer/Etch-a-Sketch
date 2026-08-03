@@ -1,8 +1,11 @@
 //set up the 16 x 16 grid
 //const grid = []; //something to hold each grid unit's data
 const gridContainer = document.querySelector("#grid-container");
-let numRows = 16;
-let numColumns = 16;
+let numRows = 50;
+let numColumns = 50;
+
+const colors = ["#0000FF", "#8A2BE2", "#7FFF00", "#B8860B", "#FF8C00", "#006400", "#8B008B", "#00FFFF", "#FFDEAD", "#808000", "#AFEEEE", "#008080","#B22222", "#483D8B", "#7FFFD4"];
+
 
 //utilize a loop, focus on the process that needs to be repeated (creating a grid unit and adding it to the grid)
 function createGrid(numRows, numColumns)
@@ -30,7 +33,7 @@ function createGrid(numRows, numColumns)
 createGrid(numRows, numColumns);
 
 
-//add an event listener to all 256 units so that when the mouse goes over them, they are colored
+//add an event listener to all units so that when the mouse goes over them, they are colored
 //a for loop is good for this, as using querySelectorAll will yield a node list holding each div unit
 let allUnits = document.querySelectorAll(".unit");
 
@@ -39,9 +42,8 @@ function attatchDrawFeatureToGridUnits(allUnits)
     for(let i = 0; i < allUnits.length; i++)
     {
         allUnits[i].addEventListener("mouseover", event => {
-            //event.preventDefault();
-            event.target.style.backgroundColor = "black";
-        
+            let randomColor = Math.floor(Math.random() * 100 % colors.length);
+            event.target.style.backgroundColor = colors[randomColor]; //select a random color for a selected unit
         });
     }
 }
