@@ -16,37 +16,27 @@ body
 #grid-container
 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    
-    align-self: center;
-    width: 400px;
-    height: 400px;
-}
-
-.row
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-
-    flex: 1;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
 }
 
 .unit
 {
-    padding: 10px;
+    padding: 2px;
     border: 1px solid gray;
     margin: 0;
 
-    flex: 1;
+    box-sizing: border-box; /* make sure padding and other things outside the content dimensions are included in the total width */
+    min-width: 0;
+    min-height: 0;
+    /* width: VARIES%; x per row because 100 / USER_SELECTED_GRID_SIZE = VARIES% -> This shall be manipulated with JavaScript */
+    aspect-ratio: 1 / 1; /* keeps them square */
 }
 
 button
 {
     padding: 8px;
-    margin: 8px;
+    margin: 24px;
     cursor: pointer;
 }
